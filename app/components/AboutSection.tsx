@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutSection() {
     const skills = [
         {
@@ -30,7 +32,7 @@ export default function AboutSection() {
         <section id="about" className="py-16 md:py-20 px-4 bg-slate-900/50">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-8 md:mb-16 text-center">
-                    <p className="text-red-500 text-sm sm:text-sm md:text-md font-medium mb-2 md:mb-4 font-sf-mono">
+                    <p className="text-red-500 text-md sm:text-md md:text-lg font-medium mb-2 md:mb-4 font-sf-mono">
                         // About Me
                     </p>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-8 font-sf-mono">
@@ -94,16 +96,16 @@ export default function AboutSection() {
 
                 {/* Interests/Tags */}
                 <div className="flex flex-col sm:flex-row flex-wrap gap-2 md:gap-3 justify-center md:justify-start mt-4 md:mt-0">
-                    <a
+                    <Link
                         href="https://www.cs.waterloo.ca"
-                        className="w-full sm:w-auto text-center px-3 md:px-6 py-1.5 md:py-2 border border-gray-600 rounded-full text-gray-200 hover:border-red-500 hover:text-red-500 transition-colors text-xs md:text-sm active:scale-95">
-                        CS @ Waterloo
-                    </a>
-                    <a
+                        className="w-full sm:w-auto text-center px-6 py-2 rounded-full border-gray-600/75 border text-gray-200 hover:text-red-500 transition-colors text-xs md:text-sm active:scale-95 relative pulse-glow">
+                        CS @ University of Waterloo
+                    </Link>
+                    <Link
                         href="https://www.wlu.ca/academics/faculties/lazaridis-school-of-business-and-economics/index.html"
-                        className="w-full sm:w-auto text-center px-3 md:px-6 py-1.5 md:py-2 border border-gray-600 rounded-full text-gray-200 hover:border-red-500 hover:text-red-500 transition-colors text-xs md:text-sm active:scale-95">
-                        BBA @ WLU
-                    </a>
+                        className="w-full sm:w-auto text-center px-6 py-2 rounded-full border-gray-600/75 border text-gray-200 hover:text-red-500 transition-colors text-xs md:text-sm active:scale-95 relative pulse-glow">
+                        BBA @ Wilfrid Laurier University
+                    </Link>
                 </div>
             </div>
         </section>

@@ -18,7 +18,7 @@ export const projects = [
     {
         title: "Forex Stock Predictor",
         description:
-            "A machine learning pipeline for predicting forex price movements using technical indicators and market data.",
+            "A machine learning pipeline for predicting forex price movements using technical indicators and market data. Achieved significant accuracy in forecasting currency trends.",
         githubUrl: "https://github.com/michaeljf07/forex-predictor",
         image: "/forex.png",
         technologies: [
@@ -50,7 +50,7 @@ export const projects = [
     {
         title: "Atari Centipede Remake",
         description:
-            "A replica of the classic Atari Centipede game using Pygame.",
+            "A replica of the classic Atari Centipede game developed using Python and Pygame as the final culminating project for my grade 12 computer science class.",
         githubUrl: "https://github.com/michaeljf07/centipede",
         image: "/centipede.png",
         technologies: ["Python", "Pygame", "Game Development"],
@@ -58,7 +58,7 @@ export const projects = [
     {
         title: "Stock Ticker Game",
         description:
-            "A Python-based stock trading simulation game built with Pygame.",
+            "A Python-based stock trading simulation game built with Pygame; based on the Stock Ticker board game where players buy and sell stocks to maximize their portfolio value.",
         githubUrl: "https://github.com/michaeljf07/Stock-Ticker",
         image: "/stock_ticker.png",
         technologies: ["Python", "Pygame", "Game Development", "Finance"],
