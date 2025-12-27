@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ContactSection() {
     return (
         <section id="contact" className="py-16 px-4">
@@ -24,7 +26,14 @@ export default function ContactSection() {
                 </div>
 
                 <div className="mt-12 md:mt-20 pt-8 border-t border-slate-800 text-gray-500 text-xs md:text-sm">
-                    <p>© 2025, Michael Ferreira</p>
+                    <p>
+                        © 2025, Michael Ferreira | inspired by{" "}
+                        <Link
+                            href="https://www.siddharthiyer.dev/"
+                            className="underline hover:cursor-pointer hover:text-gray-400">
+                            Siddharth Iyer
+                        </Link>
+                    </p>
                 </div>
             </div>
         </section>
