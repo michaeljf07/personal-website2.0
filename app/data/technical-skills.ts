@@ -27,7 +27,7 @@ export const skillCategories = [
     },
     {
         title: "Databases",
-        skills: ["PostgreSQL", "Supabase"],
+        skills: ["PostgreSQL", "Supabase", "MongoDB"],
     },
     {
         title: "Systems",

@@ -1,9 +1,9 @@
 export default function ContactSection() {
     return (
-        <section id="contact" className="py-16 md:py-20 px-4">
+        <section id="contact" className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
                 <div className="mb-6 md:mb-12">
-                    <p className="text-red-500 text-xs sm:text-sm md:text-md font-medium mb-2 md:mb-4 font-sf-mono">
+                    <p className="text-red-500 text-md sm:text-md md:text-lg font-medium mb-2 md:mb-4 font-sf-mono">
                         // Get In Touch
                     </p>
                     <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-2 md:mb-4 font-sf-mono">
@@ -23,8 +23,7 @@ export default function ContactSection() {
                     </a>
                 </div>
 
-                {/* Footer */}
-                <div className="mt-12 md:mt-20 pt-8 md:pt-12 border-t border-slate-800 text-gray-500 text-xs md:text-sm">
+                <div className="mt-12 md:mt-20 pt-8 border-t border-slate-800 text-gray-500 text-xs md:text-sm">
                     <p>© 2025, Michael Ferreira</p>
                 </div>
             </div>
