@@ -11,7 +11,7 @@ export default function HeroSection({ onScrollToSection }: HeroSectionProps) {
     return (
         <section
             id="home"
-            className="relative min-h-screen flex flex-col items-center justify-start pt-12 md:pt-16 px-4 pb-24 md:pb-20">
+            className="relative min-h-screen flex flex-col items-center justify-start pt-16 px-4 pb-20">
             {/* University Logos */}
             <div className="flex gap-4 md:gap-8 mb-6 md:mb-8">
                 <img
