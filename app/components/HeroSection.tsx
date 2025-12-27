@@ -1,7 +1,5 @@
-"use client";
-
-import { ChevronDown } from "lucide-react";
 import Link from "next/link";
+import ScrollIndicator from "./ScrollIndicator";
 
 interface HeroSectionProps {
     onScrollToSection: (id: string) => void;
@@ -52,11 +50,11 @@ export default function HeroSection({ onScrollToSection }: HeroSectionProps) {
                     className="px-8 sm:px-8 py-3 md:py-3 bg-red-600 hover:bg-red-500 text-white font-medium rounded-md transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-red-500/50 text-base sm:text-base md:text-base">
                     Resume
                 </Link>
-                <button
-                    onClick={() => onScrollToSection("projects")}
+                <a
+                    href="#projects"
                     className="px-8 sm:px-8 py-3 md:py-3 border border-red-500 text-red-500 hover:bg-red-500/10 font-medium rounded-md transition-all duration-200 hover:scale-105 text-base sm:text-base md:text-base">
                     View My Projects
-                </button>
+                </a>
             </div>
 
             {/* Social Icons */}
@@ -89,15 +87,7 @@ export default function HeroSection({ onScrollToSection }: HeroSectionProps) {
                 </a>
             </div>
 
-            {/* Scroll Indicator */}
-            <div className="absolute bottom-24 flex flex-col items-center gap-2 text-gray-100">
-                <p className="text-sm">Scroll to explore</p>
-                <button
-                    onClick={() => onScrollToSection("about")}
-                    className="animate-bounce">
-                    <ChevronDown size={24} />
-                </button>
-            </div>
+            <ScrollIndicator onScrollToSection={onScrollToSection} />
         </section>
     );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import { projects } from "@/app/data/projects";
 import { Github } from "lucide-react";
 

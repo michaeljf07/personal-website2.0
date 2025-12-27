@@ -1,5 +1,3 @@
-"use client";
-
 import { skillCategories } from "../data/technical-skills";
 
 export default function SkillsSection() {
