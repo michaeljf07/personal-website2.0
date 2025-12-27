@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "SF Mono";
+    src: url("/fonts/SFMonoRegular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Mono";
+    src: url("/fonts/SFMonoMedium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Mono";
+    src: url("/fonts/SFMonoSemibold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Mono";
+    src: url("/fonts/SFMonoBold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 10, 14, 26;
+    --background-end-rgb: 10, 14, 26;
+    --font-sf-mono: "SF Mono", monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-start-rgb));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0e1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%,
+    49% {
+        border-right-color: rgba(239, 68, 68, 1);
+    }
+    50%,
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+@layer components {
+    .font-sf-mono {
+        font-family: var(--font-sf-mono);
+    }
+
+    .typing-animation {
+        overflow: hidden;
+        border-right: 3px solid rgb(239, 68, 68);
+        white-space: nowrap;
+        animation: typing 2s steps(30, end) 1s forwards, blink 0.7s infinite 3s;
+    }
+
+    button,
+    a {
+        cursor: pointer;
+    }
 }
