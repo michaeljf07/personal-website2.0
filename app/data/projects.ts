@@ -4,7 +4,7 @@ export const projects = [
         description:
             "A web application that connects students looking for sublets with those offering them, featuring search, listings, and user authentication.",
         githubUrl: "https://github.com/michaeljf07/sublet-centre",
-        image: "/sublet-centre.png",
+        image: "/project_images/sublet-centre.png",
         demoUrl: "/demos/sublet_centre_demo.mp4",
         technologies: [
             "Next.js",
@@ -21,7 +21,7 @@ export const projects = [
         description:
             "A machine learning pipeline for predicting forex price movements using technical indicators and market data. Achieved significant accuracy in forecasting currency trends.",
         githubUrl: "https://github.com/michaeljf07/forex-predictor",
-        image: "/forex.png",
+        image: "/project_images/forex.png",
         demoUrl: "/demos/forex_demo.mp4",
         technologies: [
             "Python",
@@ -37,7 +37,7 @@ export const projects = [
         description:
             "A platform designed to make charitable giving simple, transparent, and impactful by directly connecting donors and charities.",
         githubUrl: "https://github.com/michaeljf07/baobab-website",
-        image: "/baobab.png",
+        image: "/project_images/baobab.png",
         demoUrl: "/demos/baobab_demo.mp4",
         technologies: [
             "Next.js",
@@ -55,7 +55,7 @@ export const projects = [
         description:
             "A replica of the classic Atari Centipede game developed using Python and Pygame as the final culminating project for my grade 12 computer science class.",
         githubUrl: "https://github.com/michaeljf07/centipede",
-        image: "/centipede.png",
+        image: "/project_images/centipede.png",
         demoUrl: "/demos/centipede_demo.mp4",
         technologies: ["Python", "Pygame", "Game Development"],
     },
@@ -64,7 +64,7 @@ export const projects = [
         description:
             "A Python-based stock trading simulation game built with Pygame; based on the Stock Ticker board game where players buy and sell stocks to maximize their portfolio value.",
         githubUrl: "https://github.com/michaeljf07/Stock-Ticker",
-        image: "/stock_ticker.png",
+        image: "/project_images/stock_ticker.png",
         demoUrl: "/demos/stock_ticker_demo.mp4",
         technologies: ["Python", "Pygame", "Game Development", "Finance"],
     },

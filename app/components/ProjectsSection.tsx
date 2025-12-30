@@ -3,6 +3,7 @@
 import { projects } from "@/app/data/projects";
 import { Github } from "lucide-react";
 import { useRef, useState } from "react";
+import Link from "next/link";
 
 export default function ProjectsSection() {
     const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
@@ -61,8 +62,10 @@ export default function ProjectsSection() {
                                             }
                                         }}
                                         src={project.demoUrl}
+                                        poster={project.image}
                                         className="w-full aspect-video object-cover"
                                         onPause={() => handleVideoPause(index)}
+                                        preload="metadata"
                                     />
                                     {/* Creates the play symbol overlay when a video is paused */}
                                     {!isPlaying[index] && (
@@ -106,7 +109,7 @@ export default function ProjectsSection() {
                                     </div>
                                 </div>
                                 <div className="flex gap-3 shrink-0 mt-auto">
-                                    <a
+                                    <Link
                                         href={project.githubUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -116,7 +119,7 @@ export default function ProjectsSection() {
                                         <span className="font-medium">
                                             View Code
                                         </span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
