@@ -1,7 +1,36 @@
+"use client";
+
 import { projects } from "@/app/data/projects";
 import { Github } from "lucide-react";
+import { useRef, useState } from "react";
 
 export default function ProjectsSection() {
+    const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
+    const [isPlaying, setIsPlaying] = useState<{ [key: number]: boolean }>({});
+
+    function handleVideoPlay(index: number) {
+        // Pause all other videos when the user clicks another one
+        Object.entries(videoRefs.current).forEach(([key, video]) => {
+            const videoIndex = parseInt(key);
+            if (videoIndex !== index && video && !video.paused) {
+                video.pause();
+            }
+        });
+
+        // Play the selected video
+        const video = videoRefs.current[index];
+        if (video) {
+            if (video.paused) {
+                video.play();
+                setIsPlaying((prev) => ({ ...prev, [index]: true }));
+            }
+        }
+    }
+
+    function handleVideoPause(index: number) {
+        setIsPlaying((prev) => ({ ...prev, [index]: false }));
+    }
+
     return (
         <section id="projects" className="py-16 md:py-20 px-4 bg-slate-900/50">
             <div className="max-w-6xl mx-auto">
@@ -18,9 +47,41 @@ export default function ProjectsSection() {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-linear-to-br from-slate-800/50 to-slate-800/30 border border-slate-700/50 rounded-lg md:rounded-xl p-4 md:p-5 hover:border-red-500/50 transition-all duration-200 overflow-hidden">
+                            className="bg-linear-to-br from-slate-800/50 to-slate-800/30 border border-slate-700/50 rounded-lg md:rounded-xl p-4 md:p-5 hover:border-red-500/50 transition-all duration-200 overflow-hidden flex flex-col">
+                            {/* Video Preview */}
+                            {project.demoUrl && (
+                                <div
+                                    className="relative mb-4 md:mb-5 rounded-md overflow-hidden bg-slate-950 group cursor-pointer"
+                                    onClick={() => handleVideoPlay(index)}>
+                                    <video
+                                        ref={(el) => {
+                                            if (el) {
+                                                videoRefs.current[index] = el;
+                                                el.playbackRate = 2;
+                                            }
+                                        }}
+                                        src={project.demoUrl}
+                                        className="w-full aspect-video object-cover"
+                                        onPause={() => handleVideoPause(index)}
+                                    />
+                                    {/* Creates the play symbol overlay when a video is paused */}
+                                    {!isPlaying[index] && (
+                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center pointer-events-none">
+                                            <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors transform group-hover:scale-110">
+                                                <svg
+                                                    className="w-5 h-5 text-white ml-0.5"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
                             {/* Content */}
-                            <div className="relative z-10 flex flex-col gap-3 md:gap-4">
+                            <div className="relative z-10 flex flex-col gap-3 md:gap-4 flex-1">
                                 <div className="group">
                                     <div className="relative inline-block pb-1.5">
                                         <h3 className="text-lg sm:text-xl font-bold text-white transition-colors font-sf-mono">
@@ -44,7 +105,7 @@ export default function ProjectsSection() {
                                         )}
                                     </div>
                                 </div>
-                                <div className="flex gap-3 shrink-0">
+                                <div className="flex gap-3 shrink-0 mt-auto">
                                     <a
                                         href={project.githubUrl}
                                         target="_blank"
