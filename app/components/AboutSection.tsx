@@ -24,7 +24,7 @@ export default function AboutSection() {
         },
         {
             title: "Problem Solving",
-            description: "Creative and analytical thinking",
+            description: "Analytical thinking",
         },
     ];
 
