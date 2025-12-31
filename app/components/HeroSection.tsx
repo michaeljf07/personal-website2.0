@@ -1,11 +1,6 @@
 import Link from "next/link";
-import ScrollIndicator from "./ScrollIndicator";
 
-interface HeroSectionProps {
-    onScrollToSection: (id: string) => void;
-}
-
-export default function HeroSection({ onScrollToSection }: HeroSectionProps) {
+export default function HeroSection() {
     return (
         <section
             id="home"
@@ -86,8 +81,6 @@ export default function HeroSection({ onScrollToSection }: HeroSectionProps) {
                     </svg>
                 </a>
             </div>
-
-            <ScrollIndicator onScrollToSection={onScrollToSection} />
         </section>
     );
 }
