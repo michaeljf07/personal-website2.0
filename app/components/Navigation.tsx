@@ -1,6 +1,7 @@
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 
-const navItems = [
+export const navItems = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
@@ -13,7 +14,7 @@ export default function Navigation() {
         <nav className="fixed top-0 w-full bg-slate-950/95 backdrop-blur border-b border-slate-800 z-50">
             <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-2 md:py-4">
                 <div className="flex justify-between items-center min-h-12">
-                    <div className="sm:text-sm md:text-lg font-bold text-red-500 font-sf-mono truncate">
+                    <div className="text-lg font-bold text-red-500 font-sf-mono truncate">
                         &lt;Michael Ferreira /&gt;
                     </div>
 
@@ -29,17 +30,8 @@ export default function Navigation() {
                         ))}
                     </div>
 
-                    {/* Mobile Menu - Static Links */}
-                    <div className="md:hidden flex gap-2">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.id}
-                                href={`#${item.id}`}
-                                className="transition-colors text-xs font-medium font-sf-mono py-1 px-2 rounded hover:bg-slate-800/50 text-gray-100 hover:text-red-300">
-                                {item.label.substring(0, 3)}
-                            </Link>
-                        ))}
-                    </div>
+                    {/* Hamburger Icon and Mobile Menu */}
+                    <MobileMenu />
                 </div>
             </div>
         </nav>
