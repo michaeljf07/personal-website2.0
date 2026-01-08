@@ -33,26 +33,26 @@ export default function ProjectsSection() {
     }
 
     return (
-        <section id="projects" className="py-16 md:py-20 px-4 bg-slate-900/50">
-            <div className="max-w-6xl mx-auto">
-                <div className="mb-10 md:mb-14 text-center">
-                    <p className="text-red-500 text-md sm:text-md md:text-lg font-medium mb-2 md:mb-4 font-sf-mono">
+        <section id="projects" className="py-12 md:py-16 px-4 bg-slate-900/50">
+            <div className="max-w-7xl mx-auto">
+                <div className="mb-8 md:mb-10 text-center">
+                    <p className="text-red-500 text-sm sm:text-md font-medium mb-2 font-sf-mono">
                         // Featured Work
                     </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 md:mb-4 font-sf-mono">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white font-sf-mono">
                         Featured Projects
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-linear-to-br from-slate-800/50 to-slate-800/30 border border-slate-700/50 rounded-lg md:rounded-xl p-4 md:p-5 hover:border-red-500/50 transition-all duration-200 overflow-hidden flex flex-col">
+                            className="bg-linear-to-br from-slate-800/50 to-slate-800/30 border border-slate-700/50 rounded-lg p-4 hover:border-red-500/50 transition-all duration-200 overflow-hidden flex flex-col">
                             {/* Video Preview */}
                             {project.demoUrl && (
                                 <div
-                                    className="relative mb-4 md:mb-5 rounded-md overflow-hidden bg-slate-950 group cursor-pointer"
+                                    className="relative mb-3 rounded-md overflow-hidden bg-slate-950 group cursor-pointer"
                                     onClick={() => handleVideoPlay(index)}>
                                     <video
                                         ref={(el) => {
@@ -70,9 +70,9 @@ export default function ProjectsSection() {
                                     {/* Creates the play symbol overlay when a video is paused */}
                                     {!isPlaying[index] && (
                                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center pointer-events-none">
-                                            <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors transform group-hover:scale-110">
+                                            <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-colors transform group-hover:scale-110">
                                                 <svg
-                                                    className="w-5 h-5 text-white ml-0.5"
+                                                    className="w-4 h-4 text-white ml-0.5"
                                                     fill="currentColor"
                                                     viewBox="0 0 24 24">
                                                     <path d="M8 5v14l11-7z" />
@@ -83,20 +83,19 @@ export default function ProjectsSection() {
                                 </div>
                             )}
 
-                            {/* Content */}
-                            <div className="relative z-10 flex flex-col gap-3 md:gap-4 flex-1">
+                            <div className="relative z-10 flex flex-col gap-2 flex-1">
                                 <div className="group">
-                                    <div className="relative inline-block pb-1.5">
-                                        <h3 className="text-lg sm:text-xl font-bold text-white transition-colors font-sf-mono">
+                                    <div className="relative inline-block py-1">
+                                        <h3 className="text-xl font-bold text-white transition-colors font-sf-mono">
                                             {project.title}
                                         </h3>
                                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"></span>
                                     </div>
 
-                                    <p className="text-gray-100 mb-3 md:mb-4 leading-relaxed mt-1.5 md:mt-2 text-sm md:text-base">
+                                    <p className="text-gray-100 mb-4 leading-relaxed mt-1 text-md line-clamp-3">
                                         {project.description}
                                     </p>
-                                    <div className="flex flex-wrap gap-1.5 mb-3 md:mb-4">
+                                    <div className="flex flex-wrap gap-1.5 mb-3">
                                         {project.technologies.map(
                                             (tech, techIndex) => (
                                                 <span
@@ -108,15 +107,15 @@ export default function ProjectsSection() {
                                         )}
                                     </div>
                                 </div>
-                                <div className="flex gap-3 shrink-0 mt-auto">
+                                <div className="flex gap-2 shrink-0 mt-auto">
                                     <Link
                                         href={project.githubUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 px-3 py-1.5 border border-red-500/40 hover:border-red-500/60 hover:bg-red-500/10 text-gray-200 hover:text-white rounded-md transition-all duration-200 text-sm"
+                                        className="inline-flex items-center gap-1.5 px-4 py-2 border border-red-500/40 hover:border-red-500/60 hover:bg-red-500/10 text-gray-200 hover:text-white rounded-md transition-all duration-200 text-md"
                                         aria-label="GitHub">
-                                        <Github size={16} />
-                                        <span className="font-medium">
+                                        <Github size={18} />
+                                        <span className="font-medium text-sm">
                                             View Code
                                         </span>
                                     </Link>
