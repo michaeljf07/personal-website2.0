@@ -12,7 +12,7 @@ export const navItems = [
 export default function Navigation() {
     return (
         <nav className="fixed top-0 w-full bg-slate-950/95 backdrop-blur border-b border-slate-800 z-50">
-            <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-2 md:py-4">
+            <div className="w-7/8 mx-auto px-3 sm:px-6 lg:px-8 py-2 md:py-4">
                 <div className="flex justify-between items-center min-h-12">
                     <div className="text-lg font-bold text-red-500 font-sf-mono truncate">
                         &lt;Michael Ferreira /&gt;
