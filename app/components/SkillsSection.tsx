@@ -2,9 +2,9 @@ import { skillCategories } from "../data/technical-skills";
 
 export default function SkillsSection() {
     return (
-        <section id="skills" className="py-16 md:py-20 px-4">
+        <section id="skills" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-                <div className="mb-12 md:mb-16 text-center">
+                <div className="mb-10 text-center">
                     <p className="text-red-500 text-md sm:text-md md:text-lg font-medium mb-2 md:mb-4 font-sf-mono">
                         // Tech Stack
                     </p>
@@ -13,7 +13,7 @@ export default function SkillsSection() {
                     </h2>
                 </div>
 
-                <div className="space-y-8">
+                <div className="space-y-6">
                     {skillCategories.map((category, index) => (
                         <div key={index}>
                             <div className="flex items-center mb-4">
@@ -22,8 +22,7 @@ export default function SkillsSection() {
                                 </h3>
                             </div>
 
-                            {/* Skills Grid */}
-                            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-3">
+                            <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 gap-3">
                                 {category.skills.map((skill, skillIndex) => (
                                     <div
                                         key={skillIndex}

@@ -31,6 +31,6 @@ export const skillCategories = [
     },
     {
         title: "Systems",
-        skills: ["Docker", "Git", "Vercel", "SQL"],
+        skills: ["Docker", "Git", "Vercel", "SQL", "Linux"],
     },
 ];
