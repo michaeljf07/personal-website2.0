@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function AboutSection() {
     const skills = [
         {
@@ -29,19 +27,18 @@ export default function AboutSection() {
     ];
 
     return (
-        <section id="about" className="py-16 md:py-20 px-4 bg-slate-900/50">
+        <section id="about" className="py-20 px-4 bg-slate-900/50">
             <div className="max-w-6xl mx-auto">
-                <div className="mb-8 md:mb-16 text-center">
+                <div className="mb-12 text-center">
                     <p className="text-red-500 text-md sm:text-md md:text-lg font-medium mb-2 md:mb-4 font-sf-mono">
                         // About Me
                     </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-8 font-sf-mono">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-sf-mono">
                         Who I Am
                     </h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    {/* Left: Bio + Skills */}
                     <div className="space-y-6 md:space-y-8">
                         <div className="space-y-4 md:space-y-6 px-2 md:px-0">
                             <p className="text-gray-100 text-base sm:text-lg md:text-lg leading-relaxed">
@@ -60,7 +57,6 @@ export default function AboutSection() {
                             </p>
                         </div>
 
-                        {/* Skills Cards */}
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-3">
                             {skills.map((skill, index) => (
                                 <div
@@ -80,32 +76,28 @@ export default function AboutSection() {
                                 </div>
                             ))}
                         </div>
-                    </div>
 
-                    {/* Right: Headshot */}
-                    <div className="flex items-center justify-center md:items-start mt-8">
-                        <div className="rounded-lg md:rounded-xl overflow-hidden border border-red-500/30 transition-all max-w-sm w-full md:ml-10">
-                            <img
-                                src="/headshots/headshot1.jpg"
-                                alt="Headshot"
-                                className="w-full h-auto object-cover"
-                            />
+                        <div className="flex flex-col sm:flex-row flex-wrap gap-2 md:gap-3 justify-center">
+                            <a
+                                href="https://www.cs.waterloo.ca"
+                                className="w-full sm:w-auto text-center px-6 py-2 rounded-full border-gray-600/75 border text-gray-200 hover:text-red-500 transition-colors text-xs md:text-sm active:scale-95 relative pulse-glow">
+                                CS @ University of Waterloo
+                            </a>
+                            <a
+                                href="https://www.wlu.ca/academics/faculties/lazaridis-school-of-business-and-economics/index.html"
+                                className="w-full sm:w-auto text-center px-6 py-2 rounded-full border-gray-600/75 border text-gray-200 hover:text-red-500 transition-colors text-xs md:text-sm active:scale-95 relative pulse-glow">
+                                BBA @ Wilfrid Laurier University
+                            </a>
                         </div>
                     </div>
-                </div>
 
-                {/* Interests/Tags */}
-                <div className="flex flex-col sm:flex-row flex-wrap gap-2 md:gap-3 justify-center md:justify-start mt-4 md:mt-0">
-                    <Link
-                        href="https://www.cs.waterloo.ca"
-                        className="w-full sm:w-auto text-center px-6 py-2 rounded-full border-gray-600/75 border text-gray-200 hover:text-red-500 transition-colors text-xs md:text-sm active:scale-95 relative pulse-glow">
-                        CS @ University of Waterloo
-                    </Link>
-                    <Link
-                        href="https://www.wlu.ca/academics/faculties/lazaridis-school-of-business-and-economics/index.html"
-                        className="w-full sm:w-auto text-center px-6 py-2 rounded-full border-gray-600/75 border text-gray-200 hover:text-red-500 transition-colors text-xs md:text-sm active:scale-95 relative pulse-glow">
-                        BBA @ Wilfrid Laurier University
-                    </Link>
+                    <div className="flex items-center justify-center md:items-start">
+                        <img
+                            src="/headshots/headshot1.jpg"
+                            alt="Headshot"
+                            className="w-full h-auto object-cover rounded-xl border-red-600 border max-w-sm my-auto ml-10"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
