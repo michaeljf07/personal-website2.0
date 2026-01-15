@@ -5,7 +5,7 @@ export default function HeroSection() {
         <section
             id="home"
             className="relative min-h-screen flex flex-col items-center justify-center lg:justify-start pt-16 lg:pt-24 px-4 lg:px-8 pb-20 lg:pb-32">
-            <div className="flex gap-4 md:gap-8 lg:gap-12 mb-6 md:mb-8 lg:mb-12">
+            <div className="flex gap-4 md:gap-8 lg:gap-12 mb-6 md:mb-4 lg:mb-10">
                 <img
                     src="/logos/uw_logo.png"
                     alt="University of Waterloo"
@@ -18,7 +18,7 @@ export default function HeroSection() {
                 />
             </div>
 
-            <div className="space-y-3 mb-4 md:mb-6 lg:mb-10">
+            <div className="space-y-3 mb-4 md:mb-6 lg:mb-8">
                 <p className="text-red-500 sm:text-md md:text-md lg:text-lg font-medium font-sf-mono typing-animation">
                     &gt; Hello, World! I&apos;m{""}
                 </p>
@@ -38,7 +38,7 @@ export default function HeroSection() {
                 </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 lg:gap-6 mt-10 lg:mt-16 w-full sm:w-auto justify-center text-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 lg:gap-6 mt-4 lg:mt-12 w-full sm:w-auto justify-center text-center">
                 <Link
                     href="/resume.pdf"
                     className="px-8 sm:px-8 py-3 md:py-3 lg:px-10 bg-red-600 hover:bg-red-500 text-white font-medium rounded-md transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-red-500/50 text-base sm:text-base md:text-base lg:text-lg">
@@ -51,8 +51,7 @@ export default function HeroSection() {
                 </a>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex gap-4 md:gap-6 lg:gap-10 mt-10 lg:mt-16">
+            <div className="flex gap-4 md:gap-6 lg:gap-10 mt-8 lg:mt-12">
                 <a
                     href="https://github.com/michaeljf07"
                     target="_blank"
