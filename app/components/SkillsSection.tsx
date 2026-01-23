@@ -22,7 +22,7 @@ export default function SkillsSection() {
                                 </h3>
                             </div>
 
-                            <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 gap-3">
+                            <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-8 gap-3">
                                 {category.skills.map((skill, skillIndex) => (
                                     <div
                                         key={skillIndex}
