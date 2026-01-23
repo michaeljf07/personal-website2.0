@@ -91,11 +91,11 @@ export default function AboutSection() {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-center md:items-start">
+                    <div className="flex items-center justify-center md:ml-10 lg:ml-16">
                         <img
                             src="/headshots/headshot1.jpg"
                             alt="Headshot"
-                            className="w-full h-auto object-cover rounded-xl border-red-600 border max-w-sm my-auto ml-10"
+                            className="w-full h-auto object-cover rounded-xl border-red-600 border max-w-sm my-auto"
                         />
                     </div>
                 </div>

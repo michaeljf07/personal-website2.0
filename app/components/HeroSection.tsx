@@ -4,7 +4,7 @@ export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative min-h-screen flex flex-col items-center justify-center lg:justify-start pt-16 lg:pt-24 px-4 lg:px-8 pb-20 lg:pb-32">
+            className="relative min-h-screen flex flex-col items-center justify-center md:pt-16 lg:pt-24 px-4 lg:px-8 pb-20 lg:pb-32">
             <div className="flex gap-4 md:gap-8 lg:gap-12 mb-6 md:mb-4 lg:mb-10">
                 <img
                     src="/logos/uw_logo.png"
