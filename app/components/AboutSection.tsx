@@ -93,7 +93,7 @@ export default function AboutSection() {
 
                     <div className="flex items-center justify-center md:ml-10 lg:ml-16">
                         <img
-                            src="/headshots/headshot1.jpg"
+                            src="/headshots/headshot2.jpg"
                             alt="Headshot"
                             className="w-full h-auto object-cover rounded-xl border-red-600 border max-w-sm my-auto"
                         />
